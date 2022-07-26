@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: operationService
+  servlet:
+    context-path: /operationService
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/Operations
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    hostname: ${COMPUTERNAME:localhost}
+
+server:
+  port: 8084
